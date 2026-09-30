@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,
+        initial-scale=1.0"
+    >
+
+    <title>
+        ComicCraft
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="main-container">
+
+
+    <div class="card">
+
+
+        <div class="logo">
+            🎨
+        </div>
+
+
+        <h1>
+            ComicCraft
+        </h1>
+
+
+        <p class="subtitle">
+            AI Comic Story Creator
+        </p>
+
+
+        <p class="description">
+
+            Create your own personalized
+            comic story using AI.
+
+        </p>
+
+
+        <form
+            action="/generate"
+            method="POST"
+            id="comicForm"
+        >
+
+
+            <!-- Story -->
+
+            <label>
+                📖 Story Prompt
+            </label>
+
+
+            <textarea
+                name="story_prompt"
+                placeholder="Example: A brave girl discovers a magical forest..."
+                required
+            ></textarea>
+
+
+            <!-- Character -->
+
+            <label>
+                🦸 Main Character Name
+            </label>
+
+
+            <input
+                type="text"
+                name="character_name"
+                placeholder="Example: Maya"
+                required
+            >
+
+
+            <!-- Setting -->
+
+            <label>
+                🌍 Setting
+            </label>
+
+
+            <select
+                name="setting"
+                required
+            >
+
+                <option value="Enchanted Forest">
+                    🌲 Enchanted Forest
+                </option>
+
+                <option value="School">
+                    🏫 School
+                </option>
+
+                <option value="City">
+                    🌆 City
+                </option>
+
+                <option value="Space">
+                    🚀 Space
+                </option>
+
+                <option value="Village">
+                    🏡 Village
+                </option>
+
+                <option value="Fantasy Kingdom">
+                    🏰 Fantasy Kingdom
+                </option>
+
+            </select>
+
+
+            <!-- Tone -->
+
+            <label>
+                🎭 Story Tone
+            </label>
+
+
+            <select
+                name="tone"
+                required
+            >
+
+                <option value="Funny">
+                    😂 Funny
+                </option>
+
+                <option value="Adventure">
+                    ⚔️ Adventure
+                </option>
+
+                <option value="Dramatic">
+                    🎭 Dramatic
+                </option>
+
+                <option value="Mystery">
+                    🔍 Mystery
+                </option>
+
+                <option value="Fantasy">
+                    ✨ Fantasy
+                </option>
+
+                <option value="Heartwarming">
+                    ❤️ Heartwarming
+                </option>
+
+            </select>
+
+
+            <!-- Art Style -->
+
+            <label>
+                🎨 Art Style
+            </label>
+
+
+            <select
+                name="art_style"
+                required
+            >
+
+                <option value="Comic Book">
+                    💥 Comic Book
+                </option>
+
+                <option value="Anime">
+                    🌸 Anime
+                </option>
+
+                <option value="Cartoon">
+                    🖍️ Cartoon
+                </option>
+
+                <option value="Manga">
+                    📚 Manga
+                </option>
+
+                <option value="Digital Art">
+                    🖥️ Digital Art
+                </option>
+
+                <option value="Realistic">
+                    📸 Realistic
+                </option>
+
+            </select>
+
+
+            <!-- Button -->
+
+            <button
+                type="submit"
+                id="generateButton"
+            >
+
+                ✨ Generate My Comic
+
+            </button>
+
+
+        </form>
+
+
+        <p
+            class="error-message"
+            id="errorMessage"
+            role="alert"
+            hidden
+        ></p>
+
+
+        <div
+            class="loading"
+            id="loading"
+        >
+
+            ⏳ Creating your comic...
+            <br>
+
+            <small>
+                This may take a few minutes.
+            </small>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+<script
+    src="/script.js"
+></script>
+
+
+</body>
+
+</html>
